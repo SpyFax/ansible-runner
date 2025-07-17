@@ -6,10 +6,15 @@
       "fileMatch": [
         "^\\.github/workflows/.*\\.ya?ml$"
       ],
-      "matchStrings": ["VERSION: (?<currentValue>\\d+\\.\\d+\\.\\d+)"],
+      "matchStrings": [
+        "VERSION: (?<currentValue>\\d+\\.\\d+\\.\\d+)"
+      ],
       "depNameTemplate": "ansible-runner",
       "datasourceTemplate": "pypi",
       "extractVersionTemplate": "^(?<version>.*)$"
     }
+  ],
+  "extends": [
+    ":automergeMinor"
   ]
 }
